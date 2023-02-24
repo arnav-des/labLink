@@ -1,0 +1,17 @@
+
+.loginMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.loginEngineer{
+    padding: 20px;
+    background-color: black;
+    color: beige;
+    font-weight: 600;
+    font-size: 1em;
+
+}
