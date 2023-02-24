@@ -1,11 +1,13 @@
-import './App.css';
-import HomePage from './pages/HomePage';
+import "./App.css";
+// import Certificate from "./components/Certificate";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-   <>
-   <HomePage/>
-   </>
+    <>
+      {/* <Certificate /> */}
+      <HomePage />
+    </>
   );
 }
 
