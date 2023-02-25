@@ -7,14 +7,12 @@ import moment from "moment";
 
 import "./HomePage.css";
 
-function HomePage({setIsAuth,isAuth}) {
- 
+function HomePage({ setIsAuth, isAuth }) {
   // const[userData,setUserData]=useState({});
 
-
-  const [dataList,setDataList]=useState([]);
+  const [dataList, setDataList] = useState([]);
   const dataCollectionRef = collection(db, "nablApprovedData");
- 
+
   useEffect(() => {
     const getList = async () => {
       const data = await getDocs(dataCollectionRef);
@@ -28,81 +26,149 @@ function HomePage({setIsAuth,isAuth}) {
 
   const navigate = useNavigate();
 
-
-  
-
-    const signInWithGoogle = async () => {
-      const result = await signInWithPopup(auth, provider);
-      console.log(result);
-      if(result){
-        setIsAuth(true);
-        localStorage.setItem("isAuth",true);
-        // setUserData(result);
-        navigate("/details");
-      }
+  const signInWithGoogle = async () => {
+    const result = await signInWithPopup(auth, provider);
+    console.log(result);
+    if (result) {
+      setIsAuth(true);
+      localStorage.setItem("isAuth", true);
+      // setUserData(result);
+      navigate("/details");
     }
- 
+  };
 
   return (
     <div className="homeMain">
-      <div className="certificateMain">
-        <h1 className="certificateHead">
-          {" "}
-          <img
-            classname="logo"
-            src={require("../img/logo.png")}
-            width="80px"
-            height={"80px"}
-          />
-          Certificate{" "}
-        </h1>
-
+      
         <div>
+        
+                {/* {dataList[0].status && (
+                  <div className="certificateMain">
+                    <h1 className="certificateHead">
+                      <img
+                        classname="logo"
+                        src={require("../img/logo.png")}
+                        width="80px"
+                        height={"80px"}
+                        alt="logo"
+                      />
+                      Certificate
+                    </h1>
+                    <div className="indi">
+                      <h3 className="details">Manufacturer: </h3>
+                      <h4>{dataList[0].nablData.sendData.manufacturer}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Liscense:</h3>
+                      <h4> {dataList[0].nablData.sendData.liscense}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Model Number:</h3>
+                      <h4> {dataList[0].nablData.sendData.model}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Owner:</h3>
+                      <h4> {dataList[0].nablData.sendData.owner}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Purchase Date: </h3>
+                      <h4>
+                        {" "}
+                        {moment(
+                          dataList[0].nablData.sendData.purchaseDate
+                        ).format("MMM Do YY")}
+                      </h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Last Service Date: </h3>
+                      <h4>
+                        {moment(
+                          dataList[0].nablData.sendData.lastService
+                        ).format("MMM Do YY")}
+                      </h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Next Service Date: </h3>
+                      <h4>
+                        {moment(
+                          dataList[0].nablData.sendData.nextService
+                        ).format("MMM Do YY")}
+                      </h4>
+                    </div>
+                  </div>
+                )} */}
+
+
+
+
+           
           {dataList?.map((certificate) => {
             return (
               <>
-                <div>
-                  <div className="indi">
-                    <h3 className="details">Manufacturer: </h3>
-                    <h4>{certificate.nablData.sendData.manufacturer}</h4>
+                {certificate.status && (
+                  <div className="certificateMain">
+                    <h1 className="certificateHead">
+                      <img
+                        classname="logo"
+                        src={require("../img/logo.png")}
+                        width="80px"
+                        height={"80px"}
+                        alt="logo"
+                      />
+                      Certificate
+                    </h1>
+                    <div className="indi">
+                      <h3 className="details">Manufacturer: </h3>
+                      <h4>{certificate.nablData.sendData.manufacturer}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Liscense:</h3>
+                      <h4> {certificate.nablData.sendData.liscense}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Model Number:</h3>
+                      <h4> {certificate.nablData.sendData.model}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Owner:</h3>
+                      <h4> {certificate.nablData.sendData.owner}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Purchase Date: </h3>
+                      <h4>
+                        {" "}
+                        {moment(
+                          certificate.nablData.sendData.purchaseDate
+                        ).format("MMM Do YY")}
+                      </h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Last Service Date: </h3>
+                      <h4>
+                        {moment(
+                          certificate.nablData.sendData.lastService
+                        ).format("MMM Do YY")}
+                      </h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Next Service Date: </h3>
+                      <h4>
+                        {moment(
+                          certificate.nablData.sendData.nextService
+                        ).format("MMM Do YY")}
+                      </h4>
+                    </div>
                   </div>
-                  <div className="indi">
-                    <h3 className="details">Liscense:</h3>
-                    <h4> {certificate.nablData.sendData.liscense}</h4>
-                  </div>
-                  <div className="indi">
-                    <h3 className="details">Model Number:</h3>
-                    <h4> {certificate.nablData.sendData.model}</h4>
-                  </div>
-                  <div className="indi">
-                    <h3 className="details">Owner:</h3>
-                    <h4> {certificate.nablData.sendData.owner}</h4>
-                  </div>
-                  <div className="indi">
-                    <h3 className="details">Purchase Date: </h3>
-                    <h4>
-                      {" "}
-                      {moment(certificate.nablData.sendData.purchaseDate).format("MMM Do YY")}
-                    </h4>
-                  </div>
-                  <div className="indi">
-                    <h3 className="details">Last Service Date: </h3>
-                    <h4>
-                      {moment(certificate.nablData.sendData.lastService).format("MMM Do YY")}
-                    </h4>
-                  </div>
-                  <div className="indi">
-                    <h3 className="details">Next Service Date: </h3>
-                    <h4>
-                      {moment(certificate.nablData.sendData.nextService).format("MMM Do YY")}
-                    </h4>
-                  </div>
-                </div>
+                )}
               </>
             );
           })}
+
+
+
+
         </div>
-      </div>
+     
 
       <div className="loginMain">
         <button className="loginEngineer" onClick={signInWithGoogle}>
@@ -115,21 +181,14 @@ function HomePage({setIsAuth,isAuth}) {
           Get Certified by NABL
         </Link>
       </div>
-    
 
-    <div className='loginMain'>
-        <Link to="/nabl" className='loginEngineer'  >
-
-           NABL Site
+      <div className="loginMain">
+        <Link to="/nabl" className="loginEngineer">
+          NABL Site
         </Link>
-
+      </div>
     </div>
-    
-
-    </div>
-
-    )
-
-};
+  );
+}
 
 export default HomePage;
