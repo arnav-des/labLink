@@ -7,12 +7,14 @@ import moment from "moment";
 
 import "./HomePage.css";
 
-function HomePage({ setIsAuth, isAuth }) {
-  const [userData, setUserData] = useState({});
+function HomePage({setIsAuth,isAuth}) {
+ 
+  // const[userData,setUserData]=useState({});
 
-  const [dataList, setDataList] = useState([]);
-  const dataCollectionRef = collection(db, "machineData");
 
+  const [dataList,setDataList]=useState([]);
+  const dataCollectionRef = collection(db, "nablApprovedData");
+ 
   useEffect(() => {
     const getList = async () => {
       const data = await getDocs(dataCollectionRef);
@@ -26,16 +28,21 @@ function HomePage({ setIsAuth, isAuth }) {
 
   const navigate = useNavigate();
 
-  const signInWithGoogle = async () => {
-    const result = await signInWithPopup(auth, provider);
-    console.log(result);
-    if (result) {
-      setIsAuth(true);
-      localStorage.setItem("isAuth", true);
-      setUserData(result);
-      navigate("/details");
+
+  
+
+    const signInWithGoogle = async () => {
+      const result = await signInWithPopup(auth, provider);
+      console.log(result);
+      if(result){
+        setIsAuth(true);
+        localStorage.setItem("isAuth",true);
+        // setUserData(result);
+        navigate("/details");
+      }
     }
-  };
+ 
+
   return (
     <div className="homeMain">
       <div className="certificateMain">
@@ -55,39 +62,39 @@ function HomePage({ setIsAuth, isAuth }) {
             return (
               <>
                 <div>
-                  <div>
+                  <div className="indi">
                     <h3 className="details">Manufacturer: </h3>
-                    <h4>{certificate.manufacturer}</h4>
+                    <h4>{certificate.nablData.sendData.manufacturer}</h4>
                   </div>
-                  <div>
+                  <div className="indi">
                     <h3 className="details">Liscense:</h3>
-                    <h4> {certificate.liscense}</h4>
+                    <h4> {certificate.nablData.sendData.liscense}</h4>
                   </div>
-                  <div>
+                  <div className="indi">
                     <h3 className="details">Model Number:</h3>
-                    <h4> {certificate.model}</h4>
+                    <h4> {certificate.nablData.sendData.model}</h4>
                   </div>
-                  <div>
+                  <div className="indi">
                     <h3 className="details">Owner:</h3>
-                    <h4> {certificate.owner}</h4>
+                    <h4> {certificate.nablData.sendData.owner}</h4>
                   </div>
-                  <div>
+                  <div className="indi">
                     <h3 className="details">Purchase Date: </h3>
                     <h4>
                       {" "}
-                      {moment(certificate.purchaseDate).format("MMM Do YY")}
+                      {moment(certificate.nablData.sendData.purchaseDate).format("MMM Do YY")}
                     </h4>
                   </div>
-                  <div>
+                  <div className="indi">
                     <h3 className="details">Last Service Date: </h3>
                     <h4>
-                      {moment(certificate.lastService).format("MMM Do YY")}
+                      {moment(certificate.nablData.sendData.lastService).format("MMM Do YY")}
                     </h4>
                   </div>
-                  <div>
+                  <div className="indi">
                     <h3 className="details">Next Service Date: </h3>
                     <h4>
-                      {moment(certificate.nextService).format("MMM Do YY")}
+                      {moment(certificate.nablData.sendData.nextService).format("MMM Do YY")}
                     </h4>
                   </div>
                 </div>
@@ -108,8 +115,21 @@ function HomePage({ setIsAuth, isAuth }) {
           Get Certified by NABL
         </Link>
       </div>
+    
+
+    <div className='loginMain'>
+        <Link to="/nabl" className='loginEngineer'  >
+
+           NABL Site
+        </Link>
+
     </div>
-  );
-}
+    
+
+    </div>
+
+    )
+
+};
 
 export default HomePage;

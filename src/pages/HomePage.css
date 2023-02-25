@@ -36,3 +36,15 @@
 .logo {
   padding: 20px;
 }
+
+.indi{
+  display: flex;
+  flex-direction: row;
+}
+.indi>h3{
+  padding-right:20px ;
+}
+.indi>h4{
+  font-weight: 600;
+  font-size: 16px;
+}
