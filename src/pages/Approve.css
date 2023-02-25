@@ -1,0 +1,17 @@
+.approveBtn{
+    padding: 10px 30px;
+    border: 2px solid rgb(20, 184, 20);
+    margin: 20px;
+background-color: rgb(20, 184, 20);
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: "poppins";
+    color: white;
+  width: 200px;
+
+
+}
+.approveLink{
+    margin-top: 30px;
+}

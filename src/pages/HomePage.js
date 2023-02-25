@@ -10,11 +10,11 @@ import "./HomePage.css"
 
 function HomePage({setIsAuth,isAuth}) {
  
-  const[userData,setUserData]=useState({});
+  // const[userData,setUserData]=useState({});
 
 
   const [dataList,setDataList]=useState([]);
-  const dataCollectionRef = collection(db, "machineData");
+  const dataCollectionRef = collection(db, "nablApprovedData");
  
   useEffect(() => {
     const getList = async () => {
@@ -39,7 +39,7 @@ function HomePage({setIsAuth,isAuth}) {
       if(result){
         setIsAuth(true);
         localStorage.setItem("isAuth",true);
-        setUserData(result);
+        // setUserData(result);
         navigate("/details");
       }
     }
@@ -56,13 +56,13 @@ function HomePage({setIsAuth,isAuth}) {
           <>
          
               <div>
-            <h3>Manufacturer: {certificate.manufacturer}</h3>
-            <h3>Liscense: {certificate.liscense}</h3>
-            <h3>Model Number: {certificate.model}</h3>
-            <h3>Owner: {certificate.owner}</h3>
-            <h3>Purchase Date: {moment(certificate.purchaseDate).format("MMM Do YY")}</h3>
-            <h3>Last Service Date: {moment(certificate.lastService).format("MMM Do YY")}</h3>
-            <h3>Next Service Date: {moment(certificate.nextService).format("MMM Do YY")}</h3>
+            <h3>Manufacturer: {certificate.nablData.sendData.manufacturer}</h3>
+            <h3>Liscense: {certificate.nablData.sendData.liscense}</h3>
+            <h3>Model Number: {certificate.nablData.sendData.model}</h3>
+            <h3>Owner: {certificate.nablData.sendData.owner}</h3>
+            <h3>Purchase Date: {moment(certificate.nablData.sendData.purchaseDate).format("MMM Do YY")}</h3>
+            <h3>Last Service Date: {moment(certificate.nablData.sendData.lastService).format("MMM Do YY")}</h3>
+            <h3>Next Service Date: {moment(certificate.nablData.sendData.nextService).format("MMM Do YY")}</h3>
             
               </div>
           
@@ -90,6 +90,14 @@ function HomePage({setIsAuth,isAuth}) {
         <Link to="/approve" className='loginEngineer'  >
 
             Get Certified by NABL
+        </Link>
+
+    </div>
+
+    <div className='loginMain'>
+        <Link to="/nabl" className='loginEngineer'  >
+
+           NABL Site
         </Link>
 
     </div>

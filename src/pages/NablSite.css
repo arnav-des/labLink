@@ -1,0 +1,14 @@
+.denyBtn{
+    padding: 10px 30px;
+    border: 2px solid rgb(213, 57, 22);
+    margin-top: 20px;
+background-color: rgb(213, 57, 22);
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: "poppins";
+    color: white;
+width: 200px;
+margin: 20px;
+
+}
