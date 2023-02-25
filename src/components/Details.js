@@ -70,15 +70,15 @@ export default function Details({ isAuth }) {
         <input
           type="date"
           autoComplete="off"
-          value={
-            purchaseDate.getFullYear().toString() +
-            "-" +
-            (purchaseDate.getMonth() + 1).toString().padStart(2, 0) +
-            "-" +
-            purchaseDate.getDate().toString().padStart(2, 0)
-          }
+          // value={
+          //   purchaseDate.getFullYear().toString() +
+          //   "-" +
+          //   (purchaseDate.getMonth() + 1).toString().padStart(2, 0) +
+          //   "-" +
+          //   purchaseDate.getDate().toString().padStart(2, 0)
+          // }
           onChange={(e) => {
-            setPurchaseDate(new Date(e.target.value));
+            setPurchaseDate(()=>(e.target.value));
           }}
         />
       </div>
@@ -106,15 +106,15 @@ export default function Details({ isAuth }) {
         <input
           type="date"
           autoComplete="off"
-          value={
-            lastService.getFullYear().toString() +
-            "-" +
-            (lastService.getMonth() + 1).toString().padStart(2, 0) +
-            "-" +
-            lastService.getDate().toString().padStart(2, 0)
-          }
+          // value={
+          //   lastService.getFullYear().toString() +
+          //   "-" +
+          //   (lastService.getMonth() + 1).toString().padStart(2, 0) +
+          //   "-" +
+          //   lastService.getDate().toString().padStart(2, 0)
+          // }
           onChange={(e) => {
-            setLastService(new Date(e.target.value));
+            setLastService(()=>(e.target.value));
           }}
         />
       </div>
@@ -123,15 +123,15 @@ export default function Details({ isAuth }) {
         <input
           type="date"
           autoComplete="off"
-          value={
-            nextService.getFullYear().toString() +
-            "-" +
-            (nextService.getMonth() + 1).toString().padStart(2, 0) +
-            "-" +
-            nextService.getDate().toString().padStart(2, 0)
-          }
+          // value={
+          //   nextService.getFullYear().toString() +
+          //   "-" +
+          //   (nextService.getMonth() + 1).toString().padStart(2, 0) +
+          //   "-" +
+          //   nextService.getDate().toString().padStart(2, 0)
+          // }
           onChange={(e) => {
-            setNextService(new Date(e.target.value));
+            setNextService(()=>(e.target.value));
           }}
         />
       </div>
