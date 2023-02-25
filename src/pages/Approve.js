@@ -7,7 +7,7 @@ import moment from 'moment'
 import "./Approve.css"
 function Approve() {
 
-  
+  const navigate = useNavigate();
   const [dataList,setDataList]=useState([]);
   const dataCollectionRef = collection(db, "machineData");
  const approveDataRef =collection(db,"approveData");
@@ -31,7 +31,7 @@ const approveFunc=async()=>{
     
   });
 
-  
+  navigate("/");
 }
 
 

@@ -7,6 +7,7 @@ import moment from 'moment'
 import "./NablSite.css"
 function NablSite() {
     
+  const navigate =useNavigate();
   const [dataList,setDataList]=useState([]);
  const approveDataRef =collection(db,"approveData");
 
@@ -25,17 +26,31 @@ console.log("na",dataList);
 
 const approveFunc=async()=>{
   // console.log("approve")
+  const status=true;
   const nablData = dataList[0];
   await addDoc(nablApprovedData, {
- nablData
+ nablData,
+ status
     
   });
+
+  navigate("/");
 
   
 }
 
 const denyFunc=async()=>{
+  const status = false;
+  const nablData = dataList[0];
+  await addDoc(nablApprovedData, {
+ nablData,
+ status
 
+    
+  });
+
+  navigate("/");
+  
 }
 
   return (
