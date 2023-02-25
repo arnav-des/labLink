@@ -1,5 +1,4 @@
-# Project Name
-LAB LINK
+# LAB LINK
 
 # Problem Statement
 In India, the lack of transparency in the medical scanning procedure has contributed to numerous cases of medical negligence resulting in death. This lack of transparency can prevent proper diagnosis and can lead to the use of faulty or outdated testing apparatus, producing inaccurate medical reports. This can cause serious repercussions, as the incorrect diagnosis can lead to incorrect treatment and can even be fatal. The negligence of medical staff to utilize updated technology and efficient testing procedures can have dire consequences, and it is essential that the medical scanning procedure is made more transparent in order to prevent further cases of medical negligence.
