@@ -41,6 +41,67 @@ function HomePage({ setIsAuth, isAuth }) {
     <div className="homeMain">
       
         <div>
+        
+                {/* {dataList[0].status && (
+                  <div className="certificateMain">
+                    <h1 className="certificateHead">
+                      <img
+                        classname="logo"
+                        src={require("../img/logo.png")}
+                        width="80px"
+                        height={"80px"}
+                        alt="logo"
+                      />
+                      Certificate
+                    </h1>
+                    <div className="indi">
+                      <h3 className="details">Manufacturer: </h3>
+                      <h4>{dataList[0].nablData.sendData.manufacturer}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Liscense:</h3>
+                      <h4> {dataList[0].nablData.sendData.liscense}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Model Number:</h3>
+                      <h4> {dataList[0].nablData.sendData.model}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Owner:</h3>
+                      <h4> {dataList[0].nablData.sendData.owner}</h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Purchase Date: </h3>
+                      <h4>
+                        {" "}
+                        {moment(
+                          dataList[0].nablData.sendData.purchaseDate
+                        ).format("MMM Do YY")}
+                      </h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Last Service Date: </h3>
+                      <h4>
+                        {moment(
+                          dataList[0].nablData.sendData.lastService
+                        ).format("MMM Do YY")}
+                      </h4>
+                    </div>
+                    <div className="indi">
+                      <h3 className="details">Next Service Date: </h3>
+                      <h4>
+                        {moment(
+                          dataList[0].nablData.sendData.nextService
+                        ).format("MMM Do YY")}
+                      </h4>
+                    </div>
+                  </div>
+                )} */}
+
+
+
+
+           
           {dataList?.map((certificate) => {
             return (
               <>
@@ -102,6 +163,10 @@ function HomePage({ setIsAuth, isAuth }) {
               </>
             );
           })}
+
+
+
+
         </div>
      
 
