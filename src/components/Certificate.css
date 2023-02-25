@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200&display=swap");
+.certificateData {
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: 50%;
+  margin: 20px 300px;
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.9);
+}
+.certificateDetails {
+  color: white;
+  padding: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 4px 2px rgb(0, 0, 0, 0.9);
+}
+.certificateInputs {
+  display: inline;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 4px 2px rgb(0, 0, 0, 0.2);
+}
+.certificateDetails > input {
+  padding: 7px;
+}

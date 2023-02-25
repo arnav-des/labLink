@@ -1,9 +1,11 @@
+
 import React, { useState } from 'react'
 import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
 // import { useNavigate } from "react-router-dom";
 
 import "./HomePage.css"
+
 
 function HomePage() {
 
@@ -22,10 +24,14 @@ function HomePage() {
       }
     }
   return (
-<div className='homeMain'>
-    <div className='certificateMain'>
+    <div className="homeMain">
+      <div className="certificateMain">Certificate:</div>
 
+      <div className="loginMain">
+        <button className="loginEngineer">Login For Engineer!</button>
+      </div>
     </div>
+
     <div className='loginMain'>
         <button className='loginEngineer' onClick={signInWithGoogle}>
             Login For Engineer!
@@ -36,6 +42,7 @@ function HomePage() {
 </div>
 
     )
+
 }
 
-export default HomePage
+export default HomePage;
