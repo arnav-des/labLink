@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# LAB LINK
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Using a QR code-based system that gives patients access to information about the testing equipment used in medical facilities will solve the issue of medical negligence caused by defective testing equipment in India. 
+Patients can scan the QR codes that can be printed on each machine to learn details like the unit's purchase date, purchase history, and maintenance schedules.
+This information can be made available to patients through a website or mobile app, making it easier for them to check the accuracy of their medical reports and take educated decisions regarding their health.
+By increasing testing process transparency, our approach enables people to make wise healthcare decisions.
+It also encourages medical facilities to constantly maintain and update their equipment, minimising the occurrence of medical errors brought on by malfunctioning machinery. 
+Patients can access information about the testing equipment used in medical facilities. 
+Furthermore, the approach could potentially serve to minimise the occurrence of medical malpractice litigation and enhance the general quality of healthcare in India.
 
-## Available Scripts
+## Problem Statement
+In India, the lack of transparency in the medical scanning procedure has contributed to numerous cases of medical negligence resulting in death. This lack of transparency can prevent proper diagnosis and can lead to the use of faulty or outdated testing apparatus, producing inaccurate medical reports. This can cause serious repercussions, as the incorrect diagnosis can lead to incorrect treatment and can even be fatal. The negligence of medical staff to utilize updated technology and efficient testing procedures can have dire consequences, and it is essential that the medical scanning procedure is made more transparent in order to prevent further cases of medical negligence.
 
-In the project directory, you can run:
+## Solution
+The solution to the problem of medical negligence due to faulty testing equipment in India is to implement a QR code-based system that provides patients with access to information about the testing machines used in medical facilities. 
+The QR codes can be placed on each machine and can be scanned by patients to obtain information such as the machine's maintenance history, purchase date, and servicing schedules. 
+This information can be made available to patients through a website or mobile app, making it easier for them to verify the accuracy of their medical reports and take informed decisions regarding their health.
 
-### `npm start`
+## Advantages
+Here are some advantages of the proposed solution in bullet points:
+Increased transparency in the medical testing process
+Provides patients with access to information about testing equipment used in medical facilities
+Helps patients verify the accuracy of their medical reports
+Encourages medical facilities to maintain and update their equipment regularly
+Reduces the incidence of medical errors caused by faulty machines
+Improves the overall quality of healthcare in India
+Potential to reduce the incidence of medical malpractice lawsuits
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
