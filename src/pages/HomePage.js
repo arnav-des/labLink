@@ -52,19 +52,6 @@ function HomePage({setIsAuth,isAuth}) {
       {
         dataList?.map((certificate)=>{
 
-          var t = new Date();
-          t.setSeconds( certificate.purchaseDate );
-          console.log(t);
-          var purchaseDate = moment(t).format("dd.mm.yyyy hh:MM:ss");
-          var t1 = new Date();
-          t.setSeconds( certificate.lastService );
-          console.log(t);
-          var lastService = moment(t1).format("dd.mm.yyyy hh:MM:ss");
-          var t2 = new Date();
-          t.setSeconds( certificate.nextService );
-          console.log(t);
-          var nextService = moment(t2).format("dd.mm.yyyy");
-
           return(
           <>
          
@@ -73,9 +60,9 @@ function HomePage({setIsAuth,isAuth}) {
             <h3>Liscense: {certificate.liscense}</h3>
             <h3>Model Number: {certificate.model}</h3>
             <h3>Owner: {certificate.owner}</h3>
-            <h3>Purchase Date: {purchaseDate}</h3>
-            <h3>Last Service Date: {lastService}</h3>
-            <h3>Next Service Date: {nextService}</h3>
+            <h3>Purchase Date: {moment(certificate.purchaseDate).format("MMM Do YY")}</h3>
+            <h3>Last Service Date: {moment(certificate.lastService).format("MMM Do YY")}</h3>
+            <h3>Next Service Date: {moment(certificate.nextService).format("MMM Do YY")}</h3>
             
               </div>
           
